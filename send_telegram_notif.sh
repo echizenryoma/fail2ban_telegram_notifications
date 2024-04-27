@@ -26,7 +26,7 @@ telegramBotToken='YOUR_BOT_TOKEN'
 telegramChatID='YOUR_CHAT_ID'
 
 function talkToBot() {
-	message=$1
+	message="[$HOST_NAME] $1"
 	curl -s -X POST https://api.telegram.org/bot${telegramBotToken}/sendMessage -d text="${message}" -d chat_id=${telegramChatID} > /dev/null 2>&1
 }
 
